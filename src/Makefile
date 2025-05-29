@@ -9,8 +9,8 @@ SANITIZER = -fsanitize=address -fsanitize=undefined
 
 all: toml2json
 
-toml2json: toml2json.c toml.c
-	${CC} ${CFLAGS} -o toml2json ${SANITIZER} ${COVERAGE} toml.c toml2json.c
+toml2json: toml2bash.c toml.c
+	${CC} ${CFLAGS} -o toml2bash ${SANITIZER} ${COVERAGE} toml.c toml2bash.c
 
 clean:
 	rm -f *.o *.gcov *.gcda *.gcno toml2json toml-c-test ${LIB} ${SOLIB}
